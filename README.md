@@ -1,1 +1,1 @@
-# INVO_Academy
+# INVO-Academy
