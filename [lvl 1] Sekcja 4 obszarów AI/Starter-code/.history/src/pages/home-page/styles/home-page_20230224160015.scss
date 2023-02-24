@@ -1,0 +1,78 @@
+    /// Homepage Styles File
+    /// Here we import all the Styles files we need for our Homepage.
+
+    body {
+        background-color: #0F162D;
+    }
+
+    h1,
+    p,
+    span {
+        font-family: 'DM Sans', sans-serif;
+        color: white;
+    }
+
+    main {
+        margin-top: 6em;
+        padding: 0 24px;
+        display: flex;
+        align-items: flex-start;
+
+    }
+
+    .header {
+        &__text {
+            padding: 0 40%;
+            h1 {
+                margin-block-start: 0;
+                font-size: 48px;
+                line-height: 56px;
+                font-weight: 500;
+                letter-spacing: -0.002em;
+                margin-bottom: 24px
+            }
+    
+            span {
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 400;
+            }
+    
+        }
+    }
+
+    .categories {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) ;
+        column-gap: 24px;
+        row-gap: 31px;
+        text-align: center;
+        
+        &__category {
+            background: #272D42;
+            border-radius: 24px;
+            color: white;
+            padding-top: 24px;
+            padding-bottom: 24px;
+            padding-left: 16px;
+            padding-right: 16px;
+
+            *{
+            }
+    
+            h4 {
+                font-size: 20px;
+                line-height: 0px;
+                font-weight: 500;
+            }
+    
+            span {
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 400;
+                opacity: 0.5;   
+            }
+        }
+    }
+
+    

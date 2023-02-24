@@ -1,0 +1,19 @@
+/// Homepage Styles File
+/// Here we import all the Styles files we need for our Homepage.
+
+body{
+    background-color: #0F162D;
+}
+h1,p,span{
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+}
+
+.header__text{
+
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+
+    letter-spacing: -0.002em
+}
