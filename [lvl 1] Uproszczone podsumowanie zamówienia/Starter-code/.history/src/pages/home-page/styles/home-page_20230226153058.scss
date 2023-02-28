@@ -1,0 +1,150 @@
+/// Homepage Styles File
+/// Here we import all the Styles files we need for our Homepage.
+
+// Base Styles
+
+// Colors
+$background-color: #F8F9FE;
+$title-color: #151827;
+$primary-color: #680262;
+$body-color: #85859B;
+$stroke-color: #CFD1DD;
+$white-color: #FFFFFF;
+
+
+// Styles
+$rounding: 16px;
+$stroke: 1px;
+
+// Button - Transition
+$transition: all 0.3s ease-in-out;
+$primary-color-hover: #490245;
+
+*{
+    font-family: 'Monrope', sans-serif;
+    line-height: 0;
+}
+
+body{
+    background-color: $background-color;
+}
+
+.order{
+    margin: 2em auto;
+    width: 35%;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    background-color: $white-color;
+    border-radius: 16px;
+
+    &__img{ 
+        height: 232px;
+    }
+
+    &__summary{
+        text-align: center;
+        padding: 32px 16px;
+
+        &--title{
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 0;
+            color: $title-color;
+        }
+        &--description{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 160%;
+            letter-spacing: -1%;
+            color: $body-color;
+        }
+    }
+
+    &__details{
+        margin-top: 40px;
+        margin-bottom: 32px;
+        padding: 16px 0;
+
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-content: stretch;
+        align-items: center;
+        justify-content: space-evenly;
+
+        background-color: $background-color;
+        border-radius: $rounding;
+
+        &--icon{
+            border-right: 1px $stroke-color;
+        }
+
+        &__plan{
+            padding: 0px;
+            gap: 2px;
+            display: flex;
+            flex-direction: column;
+            
+            align-items: flex-start;
+            
+            
+            &--title{
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 25px;
+                color: $title-color;
+            }
+
+            &--price{
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 160%;
+                letter-spacing: -1%;
+                color: $body-color;
+            }
+        }
+
+        &__change{
+
+            &--link{
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 160%;
+                letter-spacing: -1%;
+                color: $primary-color;
+            }
+        }
+    }
+    &__checkout{
+
+        & > button{
+            margin: 0;
+            padding: 16px 0;
+            width: 100%;
+
+            border: none;
+            border-radius: $rounding;
+            
+            transition: $transition;
+        }
+
+        &--button{
+            background-color: $primary-color;
+            color: $white-color;
+
+            &:hover{
+                background-color: $primary-color-hover;
+            }
+
+        }
+        &--link{
+            margin-top: 20px;
+            display: block;
+            color: $title-color;
+        }
+    }
+}

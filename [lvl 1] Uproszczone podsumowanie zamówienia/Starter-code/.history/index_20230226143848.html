@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INVO Academy JS Starter with Vite</title>
+</head>
+
+<!-- In order to start your challenge, remove all the content inside <div id="home-page"></div> and start coding :) -->
+
+<body>
+  <section class="order">
+    <img class="order__img" src="public/images/AdobeStock_331830515 1.png" alt="hero" />
+    <div class="order__summary">
+      <p class="order__summary--title">Order Summary</p>
+      <p class="order__summary--description">You're close! Confirm your purchase and complete your order in the next step</p>
+      <div class="order__details">
+        <div class="order__details--icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="title-color" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-music">
+            <path d="M9 18V5l12-2v13"></path>
+            <circle cx="6" cy="18" r="3"></circle>
+            <circle cx="18" cy="16" r="3"></circle>
+          </svg>
+        </div>
+        <div class="order__details__plan">
+          <p class="order__details__plan--title">Annual Plan</p>
+          <p class="order__details__plan--price">$58.99/year</p>
+        </div>
+        <div class="order__details__change">
+          <a class="order__details__change--link">Change</a>
+        </div>
+      </div>
+    </div>
+    <button class="order__checkout--button">Proceed to Payment</button>
+    <button class="order__checkout--button-cancel">Cancel Order</button>
+  </section>
+
+  <script type="module" src="/src/global-scripts/main.js"></script>
+  <script type="module" src="/src/pages/home-page/scripts/home-page.js"></script>
+</body>
+
+</html>

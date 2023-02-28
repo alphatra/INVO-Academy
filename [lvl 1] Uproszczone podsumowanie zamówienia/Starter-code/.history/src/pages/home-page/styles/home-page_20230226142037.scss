@@ -1,0 +1,80 @@
+/// Homepage Styles File
+/// Here we import all the Styles files we need for our Homepage.
+
+// Base Styles
+
+// Colors
+$background-color: #F8F9FE;
+$title-color: #151827;
+$primary-color: #680262;
+$body-color: #85859B;
+$stroke-color: #CFD1DD;
+$white-color: #FFFFFF;
+
+
+// Styles
+$rounding: 16px;
+$stroke: 1px;
+
+// Button - Transition
+$transition: all 0.3s ease-in-out;
+$primary-color-hover: #490245;
+
+*{
+    font-family: 'Monrope', sans-serif;
+}
+
+body{
+    background-color: $background-color;
+}
+
+.order{
+    margin: 2em auto;
+    width: 35%;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    background-color: $white-color;
+    border-radius: 16px;
+
+    &__img{ 
+        height: 100%;
+    }
+
+    &__summary{
+        text-align: center;
+        padding: 32px 16px;
+    }
+
+    &__details{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-content: stretch;
+        align-items: center;
+        justify-content: space-evenly;
+
+        background-color: $background-color;
+        border-radius: $rounding;
+
+        &__plan{
+            
+            &--title{
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 160%;
+                color: $title-color;
+            }
+
+            &--price{
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 0;
+                letter-spacing: -1%;
+                color: $body-color;
+            }
+        }
+    }
+}

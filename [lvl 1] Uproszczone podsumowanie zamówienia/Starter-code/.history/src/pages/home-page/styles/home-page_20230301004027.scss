@@ -1,0 +1,287 @@
+/// Homepage Styles File
+/// Here we import all the Styles files we need for our Homepage.
+
+// Base Styles
+
+// Colors
+$background-color: #F8F9FE;
+$title-color: #151827;
+$primary-color: #680262;
+$body-color: #85859B;
+$stroke-color: #CFD1DD;
+$white-color: #FFFFFF;
+
+
+// Styles
+$rounding: 16px;
+$stroke: 1px;
+
+// Button - Transition
+$transition: all 0.3s ease-in-out;
+$primary-color-hover: #490245;
+
+// Blur Animation
+@keyframes blur {
+    0%,
+    90% {
+      -webkit-filter: blur(0px);
+      -moz-filter: blur(0px);
+      -o-filter: blur(0px);
+      -ms-filter: blur(0px);
+    }
+    50% {
+      -webkit-filter: blur(50px);
+      -moz-filter: blur(50px);
+      -o-filter: blur(50px);
+      -ms-filter: blur(50px);
+    }
+  }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+*{
+    font-family: 'Monrope', sans-serif;
+    line-height: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+
+    place-content: center;
+
+    background-color: $background-color;
+}
+
+#loading-spinner{
+    z-index: 999;
+    display: none;
+    position: absolute;
+    top: 30%;
+    width: 15vh;
+    height: 15vh;
+    border: 1vh solid rgba(255, 0, 0, 0.2);
+    border-radius: 50%;
+    border-top-color: rgb(255, 0, 0);
+    animation: spin 1s ease infinite;
+    -webkit-animation: spin 1s ease infinite;
+  }
+  
+.loading {
+    pointer-events: none;
+    opacity: 1;
+    animation: blur 6s ease 0s infinite;
+    -webkit-animation: blur 6s ease 0s infinite;
+     -moz-animation: blur 6s ease 0s infinite;
+  }
+
+.order{
+    margin: auto auto;
+    width: 35%;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    background-color: $white-color;
+    border-radius: 16px;
+
+    &__img{ 
+        height: 232px;
+    }
+
+    &__summary{
+        text-align: center;
+        padding: 32px 16px;
+
+        &--title{
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 0;
+            color: $title-color;
+        }
+        &--description{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 160%;
+            letter-spacing: -1%;
+            color: $body-color;
+        }
+    }
+
+    &__details{
+        margin-top: 40px;
+        margin-bottom: 32px;
+        padding: 16px 0;
+
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-content: stretch;
+        align-items: center;
+        justify-content: space-evenly;
+
+        background-color: $background-color;
+        border-radius: $rounding;
+
+        &--icon{
+            flex-shrink: 4;
+        }
+
+        hr{
+            margin: 0;
+            height: 3em;
+        }
+
+        &__plan{
+            padding: 0px;
+            gap: 2px;
+            display: flex;
+            flex-direction: column;
+            flex-basis: 60%;
+            flex-wrap: nowrap;
+
+            align-items: flex-start;
+            
+            border: 0px 1px solid $stroke-color;
+            
+            &--title{
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 25px;
+                color: $title-color;
+            }
+
+            &--price{
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 160%;
+                letter-spacing: -1%;
+                color: $body-color;
+            }
+        }
+
+        &__change{
+            flex-shrink: 2;
+
+            &--link{
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 160%;
+                letter-spacing: -1%;
+                color: $primary-color;
+                text-decoration-line: underline;
+            }
+        }
+    }
+    &__checkout{
+
+        & > button{
+            margin: 0;
+            padding: 16px 0;
+            width: 100%;
+
+            font-size: 16px;
+
+            border: none;
+            border-radius: $rounding;
+            
+            transition: $transition;
+        }
+
+        &--button{
+            background-color: $primary-color;
+            color: $white-color;
+
+            &:hover{
+                background-color: $primary-color-hover;
+            }
+
+        }
+        &--link{
+            margin-top: 20px;
+            display: block;
+            color: $title-color;
+        }
+    }
+}
+
+@media screen and (max-width: 834px){
+    #loading-spinner{
+        width: 13vh;
+        height: 13vh;
+    }
+    .order{
+        width: 60%;
+    }
+    .order__img{
+        height: 180px;
+    }
+    .order__summary--title{
+        font-size: 24px;
+    }
+    .order__summary--description{
+        font-size: 14px;
+    }
+    .order__details__plan--title{
+        font-size: 16px;
+    }
+    .order__details__plan--price{
+        font-size: 12px;
+    }
+    .order__details__change--link{
+        font-size: 14px;
+    }
+    .order__checkout--button{
+        font-size: 16px;
+    }
+    .order__checkout--link{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 390px) {
+    .order{
+        width: 90%;
+    }
+    .order__img{
+        height: 180px;
+    }
+    .order__summary--title{
+        font-size: 24px;
+    }
+    .order__summary--description{
+        font-size: 14px;
+    }
+    .order__details__plan--title{
+        font-size: 16px;
+    }
+    .order__details__plan--price{
+        font-size: 12px;
+    }
+    .order__details__change--link{
+        font-size: 14px;
+    }
+    .order__checkout--button{
+        font-size: 16px;
+    }
+    .order__checkout--link{
+        font-size: 14px;
+    }
+    
+}
