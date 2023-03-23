@@ -1,0 +1,137 @@
+    /// Homepage Styles File
+    /// Here we import all the Styles files we need for our Homepage.
+
+    body {
+        background-color: #0F162D;
+    }
+
+    h1,
+    p,
+    span {
+        font-family: 'DM Sans', sans-serif;
+        color: white;
+        font-weight: normal;
+    }
+
+    .hero {
+        max-width: 1136px;
+        margin: 159px auto;
+        display: flex;
+        align-items: flex-start;
+
+        &__header {
+            max-width: 467px;
+        }
+
+        &__title {
+            margin-block-start: 0;
+            font-size: 48px;
+            line-height: 56px;
+            font-weight: 500;
+            letter-spacing: 0.008em;
+            margin-bottom: 24px
+        }
+
+        &__description {
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+
+        &__categories {
+            display: grid;
+            margin-left: 109px;
+            grid-template-columns: repeat(2, minmax(45%, 1fr));
+            column-gap: 24px;
+            row-gap: 31px;
+            justify-items: center; /* wyśrodkowuje kafelki w poziomie */
+  align-items: center; /* wyśrodkowuje kafelki w pionie */
+  justify-content: center; /* wyśrodkowuje cały układ kafelków w poziomie */
+  align-content: center;
+        }
+
+        &__category {
+            min-width: 268px;
+            min-height: 240px;
+            background: #272D42;
+            border-radius: 24px;
+            transition: box-shadow 0.2s ease-in-out;
+
+            &-image {}
+
+            &-title {
+                font-family: 'DM Sans';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            &-description {
+                font-family: 'DM Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+
+                opacity: 0.5;
+            }
+        }
+
+        &__category:hover {
+            box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0F162D, 0 0 60px #0F162D;
+        }
+    }
+
+    @media screen and (max-width: 834px) {
+        main {
+            display: grid;
+            gap: 5%;
+            margin-top: 30%;
+            padding: 0 20%;
+        }
+
+        .header {
+            margin-right: 0;
+
+            &__text {
+                margin-right: 0;
+                padding: 0;
+            }
+        }
+
+        .categories {
+            margin-right: auto;
+
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        main {
+            margin-top: 14%;
+            gap: 2%;
+            display: grid;
+            flex-direction: column;
+            padding: 0 5%;
+        }
+
+        .header {
+            &__text {
+                h1 {
+                    font-size: 32px;
+                    line-height: 40px;
+                }
+
+                span {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+
+        .categories {
+            grid-template-columns: repeat(1, 100%);
+            row-gap: 3%;
+        }
+
+    }

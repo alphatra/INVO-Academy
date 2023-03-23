@@ -1,0 +1,99 @@
+    /// Homepage Styles File
+    /// Here we import all the Styles files we need for our Homepage.
+
+    body {
+        background-color: #0F162D;
+    }
+
+    h1,
+    p,
+    span {
+        font-family: 'DM Sans', sans-serif;
+        color: white;
+        font-weight: normal;
+    }
+
+    .hero {
+        max-width: 1136px;
+        margin: 159px auto;
+        padding: 0 16px;
+        display: flex;
+        align-items: flex-start;
+
+        &__header {
+            max-width: 467px;
+        }
+
+        &__title {
+            margin-block-start: 0;
+            font-size: 48px;
+            line-height: 56px;
+            font-weight: 500;
+            letter-spacing: 0.008em;
+            margin-bottom: 24px
+        }
+
+        &__description {
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+
+        &__categories {
+            display: grid;
+            margin-left: 109px;
+            grid-template-columns: repeat(2, minmax(45%, 1fr));
+            column-gap: 24px;
+            row-gap: 31px;
+            text-align: center;
+            justify-items: center; /* wyśrodkowuje kafelki w poziomie */
+            align-items: center;
+            
+        }
+        &__category {
+            padding: 24px 0;
+            display: grid;
+            gap: 12px;
+            box-sizing: border-box;
+            width: 268px;
+            height: 240px;
+            background: #272D42;
+            border-radius: 24px;
+            transition: box-shadow 0.2s ease-in-out;
+
+            &-image {
+
+            }
+
+            &-title {
+                font-family: 'DM Sans';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 24px;
+
+            }
+
+            &-description {
+                font-family: 'DM Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                padding: 0 16px;
+                opacity: 0.5;
+                overflow: hidden;
+            }
+        }
+
+        &__category:hover {
+            box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0F162D, 0 0 60px #0F162D;
+        }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 959px){
+        .hero{
+            width: 834px;
+            flex-direction: column;
+        }
+    }
